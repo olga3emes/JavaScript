@@ -12,7 +12,7 @@ document.write(message);
 let n = 123;
 n = 12.345;
 
-lert( 1 / 0 ); // Infinity
+alert( 1 / 0 ); // Infinity
 alert( Infinity ); // Infinity
 alert( "no es un número" / 2 ); // NaN, tal división es errónea
 
@@ -26,23 +26,23 @@ console.log(9007199254740991 + 1); // 9007199254740992
 console.log(9007199254740991 + 2); // 9007199254740992
 
 // la "n" al final significa que es un BigInt
-const bigInt = 1234567890123456789012345678901234567890n;
+let bigInt = 1234567890123456789012345678901234567890n;
 
 //String
 let str = "Hola";
 let str2 = 'Las comillas simples también están bien';
 let phrase = `se puede incrustar otro ${str}`;
 
-let name = "John";
+let nombre = "John";
 // incrustar una variable
-alert( `Hola, ${name}!` ); // Hola, John!
+alert( `Hola, ${nombre}!` ); // Hola, John!
 // incrustar una expresión
 alert( `el resultado es ${1 + 2}` ); //el resultado es 3
 
 alert( "el resultado es ${1 + 2}" ); // el resultado es ${1 + 2} 
 //(las comillas dobles no hacen nada)
 
-//Boolean
+//Boolean---------------------------------------
 let nameFieldChecked = true; // sí, el campo name está marcado
 let ageFieldChecked = false; // no, el campo age no está marcado
 
