@@ -5,9 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
-</head>
 <body>
-    
+    <table id="table">
+        <tr>
+          <td>Su edad:</td>
+          <td>
+            <label>
+              <input type="radio" name="age" value="young" checked> menos de 18
+            </label>
+            <label>
+              <input type="radio" name="age" value="mature"> de 18 a 50
+            </label>
+            <label>
+              <input type="radio" name="age" value="senior"> más de 60
+            </label>
+          </td>
+        </tr>
+      </table>
+      <script>
+        let inputs = table.getElementsByTagName('input'); 
+        for (let input of inputs) {
+          alert( input.value + ': ' + input.checked );
+        }
+      </script>
 </body>
 </html>

@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="script.js"></script>
-</head>
-<body>
-    
-</body>
+  </head>
+ <body>
+    <p>Un párrafo</p>
+    <div>Un div</div>
+    <script>
+      alert(document.body.innerHTML); // leer el contenido actual
+      document.body.innerHTML = "El nuevo BODY!"; // reemplazar
+    </script>
+  </body>
+<!-- Incorrecto:  <body>
+    <script>
+      document.body.innerHTML = "<b>prueba"; // olvidé cerrar la etiqueta
+      alert(document.body.innerHTML); // <b>prueba</b> (arreglado)
+    </script>
+  </body>-->
 </html>

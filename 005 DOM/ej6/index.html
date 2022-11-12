@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="script.js"></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div id="elem">
+      <div id="elem-content">Elemento</div>
+    </div>
+    <script>
+      // elem es una referencia al elemento del DOM con id="elem"
+      elem.style.background = "red";
+      // id="elem-content" tiene un guion en su interior, por lo que no puede ser un nombre de variable
+      // ...pero podemos acceder a él usando corchetes: window['elem-content']
+    </script>
+  </body>
 </html>
