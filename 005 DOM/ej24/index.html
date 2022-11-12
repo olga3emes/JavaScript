@@ -7,13 +7,11 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="news">
-      <h1>¡Titular!</h1>
-      <p>¡Los marcianos atacan a la gente!</p>
-    </div>
+    <input type="text" id="elem" value="value" />
     <script>
-      // ¡Titular! ¡Los marcianos atacan a la gente!
-      alert(news.textContent);
+      alert(elem.type); // "text"
+      alert(elem.id); // "elem"
+      alert(elem.value); // value
     </script>
   </body>
 </html>
