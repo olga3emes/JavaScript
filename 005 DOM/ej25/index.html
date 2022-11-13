@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <script>
+      document.body.myData = {
+        name: "Cesar",
+        title: "Emperador",
+      };
+      alert(document.body.myData.title); // Emperador
+
+      //Agregando un método
+      document.body.sayTagName = function () {
+        alert(this.tagName);
+      };
+      document.body.sayTagName(); // BODY (el valor de 'this' en el método es document.body)
+      
+      //Element.prototype
+      Element.prototype.sayHi = function () {
+        alert(`Hola, yo soy ${this.tagName}`);
+      };
+      document.documentElement.sayHi(); // Hola, yo soy HTML
+      document.body.sayHi(); // Hola, yo soy BODY
+    </script>
+  </body>
 </html>

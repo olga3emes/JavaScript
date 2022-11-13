@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <style>
+      /* los estilos se basan en el atributo personalizado "order-state" */
+      .order[order-state="nuevo"] {
+        color: green;
+      }
+      .order[order-state="pendiente"] {
+        color: blue;
+      }
+      .order[order-state="cancelado"] {
+        color: red;
+      }
+    </style>
+    <div class="order" order-state="nuevo">Un nuevo pedido.</div>
+    <div class="order" order-state="pendiente">Un pedido pendiente.</div>
+    <div class="order" order-state="cancelado">Un pedido cancelado</div>
+    <script>
+      // un poco más simple que eliminar/agregar clases
+      div.setAttribute("order-state", "canceled");
+    </script>
+  </body>
 </html>

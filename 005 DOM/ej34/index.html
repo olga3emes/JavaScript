@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <!-- marque el div para mostrar "nombre" aquí -->
+    <div show-info="nombre"></div>
+    <!-- y "edad" aquí -->
+    <div show-info="edad"></div>
+    <script>
+      /* el código encuentra un elemento con la marca y 
+      muestra lo que se solicita*/
+      let user = {
+        nombre: "Pete",
+        edad: 25,
+      };
+      for (let div of document.querySelectorAll("[show-info]")) {
+        // inserta la información correspondiente en el campo
+        let field = div.getAttribute("show-info");
+        div.innerHTML = user[field]; // primero Pete en "nombre", luego 25 en "edad"
+      }
+    </script>
+  </body>
 </html>
