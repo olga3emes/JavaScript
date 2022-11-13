@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div id="div_principal" style="height:100px ;width: 100px;background-color: crimson;"></div>
+    <script>
+      function muestraMensaje() {
+        console.log("Has pulsado el ratón");
+      }
+      function muestraOtroMensaje() {
+        console.log(
+          "Has pulsado el ratón y por eso se muestran estos mensajes");
+      }
+      var elDiv = document.getElementById("div_principal");
+      elDiv.addEventListener("click", muestraMensaje, true);
+      elDiv.addEventListener("click", muestraOtroMensaje, true);
+    </script>
+  </body>
 </html>

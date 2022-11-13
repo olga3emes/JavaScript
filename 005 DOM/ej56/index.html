@@ -7,6 +7,36 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form name="formCliente" id="frmClnt"> 
+        <fieldset id="infoPersonal">
+        <legend>Datos Personales</legend>
+        <p><label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nom" /></p> 
+        <p><label for="correo">Email</label>
+        <input type="email" name="correo" id="email" /></p> 
+        <fielset id="direccion">
+            <legend>Dirección:</legend>
+            <p><label for="tipoVia">Tipo de Vía</label> 
+            <select name="tipoVia" id="tipoViaId">
+            <option value="calle">Calle</option> 
+            <option value="avda">Avenida</option> 
+            <option value="pza">Plaza</option>
+            </select> 
+            </p>
+            <p><label for="domicilio">Domicilio</label>
+            <input type="text" name="domicilio" id="domi" /></p> 
+        </fieldset>
+    </form>
+    <script>
+        let tipoViaId = document.getElementById("tipoViaId");
+        tipoViaId.onchange = function() {
+            let indice = tipoViaId.selectedIndex;   // 1
+            let valor = tipoViaId.options[indice].value;  // avda
+            let texto = tipoViaId.options[indice].text;  // Avenida 
+            /*let op = new Option("Camino Rural", "rural"); 
+            tipoViaId.add(op, tipoViaId.options[3]);*/
+            console.log(indice, valor, texto);
+        };
+    </script>
 </body>
 </html>

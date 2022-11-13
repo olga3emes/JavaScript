@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <form name="myForm">
+      <input type="radio" name="radios" id="radio1" value="1" />
+      <label for="radio1"> Default radio 1 </label>
+      <input type="radio" name="radios" id="radio2" value="2" />
+      <label for="radio2"> Default radio 2 </label>
+      <input type="radio" name="radios" id="radio3" value="3" />
+      <label for="radio3"> Default radio 3 </label>
+    </form>
+    <script>
+      let radios = document.myForm.radios;
+      let elegido = null;
+      for (var i = 0; i < radios.length; i++) {
+        radios[i].addEventListener("change", function () {
+          elegido ? elegido.value : null;
+          if (this !== elegido) {
+            elegido = this;
+          }
+          console.log(this.value);
+        });
+      }
+    </script>
+  </body>
 </html>

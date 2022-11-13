@@ -7,6 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form name="formCliente" id="frmClnt"> 
+        <fieldset id="infoPersonal">
+        <legend>Datos Personales</legend>
+        <p><label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nom" /></p> 
+        <p><label for="correo">Email</label>
+        <input type="email" name="correo" id="email" /></p> 
+        </fieldset>
+        <!-- ...Dirección ... -->
+        </fieldset> 
+    </form>
+    <script>
+    // Mediante el atributo name
+    let formulario = document.forms.formCliente; 
+    let correo = formulario.correo;
+    // Mediante el atributo id
+    let formuId = document.getElementById("frmClnt"); 
+    let correoId = document.getElementById("email");
+    </script>
 </body>
 </html>
