@@ -1,6 +1,12 @@
-<html onclick="procesaEvento()">
+<html onclick="procesaEvento('html')">
   <head><title>Ejemplo de flujo de eventos</title></head>
-  <body onclick="procesaEvento()">
-    <div onclick="procesaEvento()">Pincha aqui</div>
+  <body onclick="procesaEvento('body')">
+    hola
+    <div onclick="procesaEvento('div')">Pincha aqui</div>
   </body>
+  <script>
+    function procesaEvento(x){
+      alert(x);
+    }
+  </script>
 </html>

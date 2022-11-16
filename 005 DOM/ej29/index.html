@@ -9,7 +9,7 @@
   <body>
     <div id="elem" about="Elephant"></div>
     <script>
-      alert(elem.getAttribute("About")); // (1) 'Elephant', leyendo
+      alert(elem.getAttribute("about")); // (1) 'Elephant', leyendo
       elem.setAttribute("Test", 123); // (2), escribiendo
       alert(elem.outerHTML); // (3), ver si el atributo está en HTML (sí)
       for (let attr of elem.attributes) {
