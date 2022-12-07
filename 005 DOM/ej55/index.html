@@ -19,10 +19,16 @@
         </fieldset> 
     </form>
     <script>
+  
       var correoId = document.getElementById("email");
-      if (correoId.value == "") {
-        alert("Por favor, introduce el correo");
+      function validaCorreo(){
+        if (correoId.value == "") {
+          console.log("Por favor, introduce el correo");
+        }
       }
+    
+          correoId.addEventListener('click', validaCorreo,false);
+    
     </script>
   </body>
 </html>

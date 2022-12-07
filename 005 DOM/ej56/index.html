@@ -33,10 +33,11 @@
             let indice = tipoViaId.selectedIndex;   // 1
             let valor = tipoViaId.options[indice].value;  // avda
             let texto = tipoViaId.options[indice].text;  // Avenida 
-            /*let op = new Option("Camino Rural", "rural"); 
-            tipoViaId.add(op, tipoViaId.options[3]);*/
             console.log(indice, valor, texto);
         };
+
+       let op = new Option("Camino Rural", "rural"); 
+            tipoViaId.add(op, tipoViaId.options[3]);
     </script>
 </body>
 </html>
